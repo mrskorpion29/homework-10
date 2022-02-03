@@ -1,0 +1,181 @@
+.block{
+    width: 200px;
+    height: 200px;
+    border: 2px solid green;
+    background-color: lightgrey;
+    position: relative;
+    top: 100px;
+    left: 30%;
+    /* transition: 2s; */
+    /* transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-in;
+    transition-delay: 1s; */
+
+    transition:all 2s ease-in 1s;
+
+    /* animation-name: changeBlock ; */
+    /* animation-duration: 4s;
+    animation-iteration-count: 2;
+    /* animation-delay: 5s; */
+    /* animation-timing-function: linear; */
+    /* animation-direction:  alternate-reverse; */
+    /* animation-fill-mode: forwards ; */ 
+    /* animation: changeBlock 4s ease 5s infinite alternate-reverse; */
+}
+
+.block:hover{
+    width: 300px;
+    height: 300px;
+    /* animation-play-state: paused; */
+}
+
+@keyframes changeBlock{
+    25% {
+        background: rgb(166, 255, 0);
+        top: 100px;
+        left: 50%;
+    }
+
+    50% {
+        background: rgb(224, 128, 17);
+        top: 300px;
+        left: 50%;
+    }
+
+    75% {
+        background: rgb(255, 60, 0);
+        left: 25%;
+        top: 300px;
+    }
+
+    100% {
+        background: red;
+        top: 100px;
+        left: 25%;
+    }
+}
+
+.container{
+    width: 600px;
+    height: 600px;
+    border: 10px solid #000;
+    border-radius: 55%;
+    position: relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    animation: rainbow 70s ease infinite;
+}
+
+@keyframes rainbow {
+    0%{
+        background-position:0% 33%;
+    }
+
+    25%{
+        background-position:33% 66%;
+    }
+    50%
+    {background-position:66% 99%;
+    }
+    75%{
+        background-position:66% 33%;
+    }
+    100%{
+        background-position:33% 0%;
+    }
+}
+
+.point1{
+    position: absolute;
+    top: 10px;
+    width: 20px;
+    height: 50px;
+    background: #000;
+    border-radius: 10px;
+}
+
+.point2{
+    position: absolute;
+    width: 20px;
+    height: 50px;
+    background: #000;
+    border-radius: 10px;
+    top: 540px;
+    
+}
+
+.point3{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #000;
+    border-radius: 10px;
+    left: 10px;
+}
+
+.point4{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #000;
+    border-radius: 10px;
+    left: 540px;
+}
+
+.center{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+
+
+}
+
+.big{
+    position: absolute;
+    width: 40px;
+    height: 240px;
+    background: #000;
+    border-radius: 50%;
+    top: 300px;
+    animation: big 12s linear infinite;
+    transform-origin: top;
+}
+
+.small{
+    position: absolute;
+    width: 40px;
+    height: 170px;
+    background: #000;
+    border-radius: 50%;
+    top:130px;
+    animation: small 100s linear infinite;
+    transform-origin: bottom;
+}
+
+@keyframes big {
+    0% {
+        transform: rotate(-180deg);
+        
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes small {
+    0% {
+        transform: rotate(-180deg)
+    }
+    100% {
+        transform: rotate(180deg)
+    }
+}
